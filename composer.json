@@ -4,7 +4,7 @@
     "description": "Codnet Services for PHP",
     "keywords": ["php", "framework", "services", "doctrine", "codnet"],
     "homepage": "http://www.codnet.com.ar",
-    "license": "MIT",
+    "license": "GPL v2",
     "authors": [
         {"name": "Bernardo Iribarne", "email": "ber.iribarne@gmail.com"}
     ],
