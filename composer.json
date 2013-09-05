@@ -1,0 +1,24 @@
+{
+    "name": "codnet/cose",
+    "type": "library","version":"1.0.0",
+    "description": "Codnet Services for PHP",
+    "keywords": ["services"],
+    "homepage": "http://www.codnet.com.ar",
+    "license": "MIT",
+    "authors": [
+        {"name": "Bernardo Iribarne", "email": "ber.iribarne@gmail.com"}
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/apache/logging-log4php"
+        }
+    ],
+    "require": {
+        "apache/log4php": "2.3.0",
+        "doctrine/orm": "*"
+    },
+    "autoload": {
+        "psr-0": { "Cose": "src/main/php" }
+    }
+}
