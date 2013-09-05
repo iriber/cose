@@ -2,7 +2,7 @@
     "name": "codnet/cose",
     "type": "library","version":"1.0.0",
     "description": "Codnet Services for PHP",
-    "keywords": ["services"],
+    "keywords": ["php", "framework", "services", "doctrine", "codnet"],
     "homepage": "http://www.codnet.com.ar",
     "license": "MIT",
     "authors": [
