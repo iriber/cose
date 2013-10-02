@@ -49,5 +49,17 @@ class Logger{
 		}
 		
 	}
+
+	public static function logObject( $object, $clazz = __CLASS__, $level = self::LEVEL_INFO ){
+		ob_start();	
+		echo "<pre>";
+   		var_dump($object);
+	   	echo "</pre>";
+	   	
+	   	$msg = ob_get_clean();
+	   	
+	   	self::log($msg, $clazz, $level);
+	}
+	
 }
 	
