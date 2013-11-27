@@ -24,7 +24,7 @@ class PersistenceConfig {
 		return self::$defaultUnit;
 	}
 	
-	public static function configure($unitName, $namespaceProxies, $pathProxies, $pathEntities, $connectionOptions) {
+	public static function configure($unitName, $namespaceProxies, $pathProxies, $pathEntities, $connectionOptions, $caching=false) {
 		
 		// configuration (2)
 		$config = new Configuration();
@@ -48,15 +48,15 @@ class PersistenceConfig {
 		//$config->addCustomDatetimeFunction("MONTH", "Doctrine\Extension\Functions\MonthFunction");
 		
 		// Caching Configuration (5)
-		//if (APPLICATION_ENV == "development") {
-		    $cache = new \Doctrine\Common\Cache\ArrayCache();
-		//} else {
-		//    $cache = new \Doctrine\Common\Cache\ApcCache();
-		//}
+		if ($caching) {
+		    $cache = new \Doctrine\Common\Cache\ApcCache();
+		} else {
+			$cache = new \Doctrine\Common\Cache\ArrayCache();
+		}
 		
 		$config->setMetadataCacheImpl($cache);
 		$config->setQueryCacheImpl($cache);
-		//$config->setResultCacheImpl($cache);
+		$config->setResultCacheImpl($cache);
 		
 		$unit = new PersistenceUnit();
 		$unit->setConfig($config);
