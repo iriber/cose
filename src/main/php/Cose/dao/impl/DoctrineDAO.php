@@ -83,7 +83,6 @@ abstract class DoctrineDAO implements IGenericDAO{
    		$orders = $criteria->getOrders();
    		foreach ($orders as $order) {
    			$queryBuilder->addOrderBy( $this->getFieldName($order["name"]) , $order["type"] );
-   			//Logger::log($order["name"] . ":" . $order["type"], __CLASS__);
    		}
    		
 		//obtenemos el query del builder.
